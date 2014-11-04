@@ -18,8 +18,9 @@ class Dbcache extends CI_Model {
 
 	function save_search( $term , $response ){
 		/* save the data to the database */
-		$data->term = $term ;
-		$data->response = $response ;
+		$data = array();
+		$data["term"] = $term ;
+		$data["response"] = $response ;
 		$this->db->insert('search', $data);
 
 	}
@@ -34,8 +35,9 @@ class Dbcache extends CI_Model {
 
 	function save_movie_data( $imdbid , $response ){
 		/* save the data to the database */
-		$data->imdbid = $imdbid ;
-		$data->response = $response ;
+		$data = array();
+		$data["imdbid"] = $imdbid ;
+		$data["response"] = $response ;
 		$this->db->insert('movie', $data);
 	}
 
